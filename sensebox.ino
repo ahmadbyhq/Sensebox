@@ -138,10 +138,6 @@ void loop() {
         u8g2.print("%");
     }
 
-    //   if (isTouchActive == true) {
-    //   u8g2.drawXBM(110.5, 3.5, 11, 11, image_lock_1_bits);
-    // }
-
     if (fireStatus == LOW) {
       fire = true;
     } else {
@@ -205,30 +201,6 @@ void loop() {
     } else {  
         setColor(0, 0, 0);  // Jika tombol ditekan, LED mati manual
     }
-
-// // **Logika LED**
-// if (manualTouch) {  
-//     setColor(0, 0, 0);  // Matikan LED hanya jika sentuhan manual
-//     isLEDOn = false;
-// } else {
-//     if (ldrValue < THRESHOLD) {  
-//         setColor(255, 255, 153);  // LED menyala hijau kekuningan jika gelap
-//         isLEDOn = true;
-//     } else {  
-//         setColor(0, 0, 0);  // Matikan LED jika terang
-//         isLEDOn = false;
-//     }
-
-
-    // // **Logika Buzzer**
-    // if (fire || temperature > 39) {  
-    //     isBuzzerOn = true;
-    // } else {  
-    //     isBuzzerOn = false;
-    // }
-    // // Kontrol output buzzer
-    // digitalWrite(BUZZER_PIN, isBuzzerOn ? HIGH : LOW);
-
     delay(100);
 }
 
